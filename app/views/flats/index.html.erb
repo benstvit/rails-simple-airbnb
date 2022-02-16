@@ -1,0 +1,10 @@
+<h1>Available flats</h1>
+
+<ul class='list-unstyled m-3'>
+  <% @flats.each do |flat| %>
+  <li class='mb-3'><%= flat.name %></li>
+  <li><%= flat.description %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add new flat to the list", new_flat_path, class: 'btn btn-info p-2 rounded' %>
